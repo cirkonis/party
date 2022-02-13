@@ -1,0 +1,11 @@
+runtime: node.js
+api_version: 1
+threadsafe: true
+
+handlers:
+  - url: /
+    static_files: dist/party/index.html
+    upload: dist/party/index.html
+
+  - url: /
+    static_dir: dist/party
