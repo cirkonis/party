@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PartyComponent } from './party/party.component';
+import {PartyService} from './party/party.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,10 @@ import { PartyComponent } from './party/party.component';
     PartyComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PartyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

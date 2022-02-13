@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IInvite, INVITES} from './invites';
+import IInvite from './Invite';
+import {PartyService} from './party.service';
 
 @Component({
   selector: 'app-party',
@@ -7,20 +8,19 @@ import {IInvite, INVITES} from './invites';
   styleUrls: ['./party.component.css']
 })
 export class PartyComponent implements OnInit {
-  // @ts-ignore
-  invites: IInvite[] = INVITES;
+  invites: IInvite[] = [];
 
-  constructor() {}
+  constructor(private partyService: PartyService) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    await this.partyService.listInvites().subscribe(invites => this.invites = invites);
   }
 
 
 
 
   updateInviteRSVP(invite: IInvite): void{
-    const inviteIndex = this.invites.findIndex(i => i.id === invite.id);
-    this.invites[inviteIndex].rsvp = invite.rsvp;
+      console.log('hi mike :)');
   }
 
 }
