@@ -19,8 +19,11 @@ export class PartyComponent implements OnInit {
 
 
 
-  updateInviteRSVP(invite: IInvite): void{
-      console.log('hi mike :)');
+  async updateInviteRSVP(invite: IInvite): void{
+      invite.name = 'i have updated permantly';
+      await this.partyService.updateTodo(invite).subscribe(async () => {
+        await this.partyService.listInvites().subscribe(invites => this.invites = invites);
+      });
   }
 
 }
