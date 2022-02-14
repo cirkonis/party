@@ -8,13 +8,13 @@ import IInvite from './Invite';
 export class PartyService {
   constructor(private http: HttpClient) {}
 
-  apiURL = 'https://students-dot-sharkcell.ew.r.appspot.com/entities';
+  apiURL = 'https://student-app-api-dot-sharkcell.ew.r.appspot.com/secret/invites';
 
   listInvites(): Observable<any> {
     return this.http.get(`${this.apiURL}`);
   }
 
-  updateTodo(invite: IInvite): Observable<any> {
-    return this.http.put(`${this.apiURL}/${invite.id}/update`, invite);
+  updateInvite(invite: IInvite): Observable<any> {
+    return this.http.put(`${this.apiURL}`, invite);
   }
 }

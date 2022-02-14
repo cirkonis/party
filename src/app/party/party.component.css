@@ -1,0 +1,28 @@
+.the-listy-part{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.the-cool-people-box{
+  flex-basis: 50%;
+}
+
+.the-shit-people-box{
+  flex-basis: 50%;
+}
+
+.cool-people, .shit-peeps{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cool-people button{
+  height: 30px;
+}
+
+.shit-peeps button{
+  height: 30px;
+}
+

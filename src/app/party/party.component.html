@@ -1,3 +1,22 @@
-<div *ngFor="let invite of invites">
-  <button (click)="updateInviteRSVP(invite)">{{invite.name}}</button>
+<h1>You are invited to a parties...</h1>
+<h1>Date: Febuary Friday </h1>
+<h1>Time: Party </h1>
+<h1>Where: OUr apartment</h1>
+<h1>Why: warm our apartment, kira is born, mike is alone</h1>
+<h4>TODO: 15-02-2022 MM will make website cooler later</h4>
+<div class="the-listy-part">
+  <div class="the-cool-people-box">
+<h2>Cool People that Are Coming</h2>
+<div class = "cool-people" *ngFor="let invite of coolPeople">
+  <h3>{{invite.name}}</h3>
+  <button (click)="makeShit(invite)">Click 2 be UNcool</button>
+</div>
+  </div>
+  <div class="the-shit-people-box">
+<h2>Not as Cool People That are not Coming</h2>
+<div class = "shit-peeps" *ngFor="let shitvite of shitPeople">
+  <h3>{{shitvite.name}}</h3>
+  <button (click)="makeCool(shitvite)">Click 2 be COOL</button>
+</div>
+  </div>
 </div>

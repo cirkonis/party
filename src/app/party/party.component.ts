@@ -8,22 +8,61 @@ import {PartyService} from './party.service';
   styleUrls: ['./party.component.css']
 })
 export class PartyComponent implements OnInit {
-  invites: IInvite[] = [];
+  coolPeople: IInvite[] = [];
+  shitPeople: IInvite[] = [];
 
   constructor(private partyService: PartyService) {}
 
-  async ngOnInit(): Promise<void> {
-    await this.partyService.listInvites().subscribe(invites => this.invites = invites);
+  ngOnInit(): void {
+    this.loadInvites();
   }
 
+  loadInvites(): void{
+    let invites: IInvite[] = [];
+    this.coolPeople = [];
+    this.shitPeople = [];
+    this.partyService.listInvites().subscribe((data: any) => {
+      invites = data.data;
+      this.sortTheCoolFromtheUncool(invites);
+    });
+  }
 
+  sortTheCoolFromtheUncool(invites: IInvite[]): void{
+    for (const invite of invites){
+      if (invite.rsvp === 1){
+        this.coolPeople.push(invite);
+      } else{this.shitPeople.push(invite); }
+    }
+  }
 
+  makeShit(invite: IInvite): void {
+    if (this.checkPasscode()){
+      this.updateInviteRsvp(invite, 0);
+    }
+  }
 
-  async updateInviteRSVP(invite: IInvite): Promise<void>{
-      invite.name = 'i have updated permantly';
-      await this.partyService.updateTodo(invite).subscribe(async () => {
-        await this.partyService.listInvites().subscribe(invites => this.invites = invites);
-      });
+  makeCool(invite: IInvite): void {
+    if (this.checkPasscode()){
+      this.updateInviteRsvp(invite, 1);
+    }
+  }
+
+  checkPasscode(): boolean {
+    return true;
+  }
+
+  updateInviteRsvp(invite: IInvite, coolness: 0 | 1): void{
+    console.log(invite);
+    const inviteToUpdate = {
+      id: invite.id,
+      rsvp: coolness,
+      passcode: invite.passcode,
+      name: invite.name
+    };
+    console.log(inviteToUpdate);
+    this.partyService.updateInvite(inviteToUpdate).subscribe(() => {
+      this.loadInvites();
+    });
   }
 
 }
