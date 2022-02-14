@@ -8,7 +8,7 @@ import IInvite from './Invite';
 export class PartyService {
   constructor(private http: HttpClient) {}
 
-  apiURL = 'http://localhost:3000/entities';
+  apiURL = 'https://students-dot-sharkcell.ew.r.appspot.com/entities';
 
   listInvites(): Observable<any> {
     return this.http.get(`${this.apiURL}`);
