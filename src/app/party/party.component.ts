@@ -52,14 +52,12 @@ export class PartyComponent implements OnInit {
   }
 
   updateInviteRsvp(invite: IInvite, coolness: 0 | 1): void{
-    console.log(invite);
     const inviteToUpdate = {
       id: invite.id,
       rsvp: coolness,
       passcode: invite.passcode,
       name: invite.name
     };
-    console.log(inviteToUpdate);
     this.partyService.updateInvite(inviteToUpdate).subscribe(() => {
       this.loadInvites();
     });
