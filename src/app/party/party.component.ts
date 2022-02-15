@@ -63,14 +63,16 @@ export class PartyComponent implements OnInit {
     });
   }
 
-  checkPasscode(passcode: string): boolean | void{
+  checkPasscode(passcode: string): boolean {
+    let goodToGo = false;
     const dialogRef = this.dialog.open(PartyDialogComponent, {
       width: '250px',
       height: '250px',
       data: {passcode},
     });
     dialogRef.afterClosed().subscribe(result => {
-      return !!result.result;
+      goodToGo = result.result;
     });
+    return goodToGo;
   }
 }
