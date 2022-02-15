@@ -14,6 +14,7 @@ export class PartyComponent implements OnInit {
   partyText = partyText;
   coolPeople: IInvite[] = [];
   shitPeople: IInvite[] = [];
+  goodToGo: boolean;
 
   constructor(private partyService: PartyService, public dialog: MatDialog) {}
 
@@ -67,15 +68,14 @@ export class PartyComponent implements OnInit {
   }
 
   checkPasscode(passcode: string): boolean {
-    let goodToGo = false;
     const dialogRef = this.dialog.open(PartyDialogComponent, {
       width: '250px',
       height: '250px',
       data: {passcode},
     });
     dialogRef.afterClosed().subscribe(result => {
-      goodToGo = result.result;
+      this.goodToGo = result.result;
     });
-    return goodToGo;
+    return this.goodToGo;
   }
 }
