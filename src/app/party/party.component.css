@@ -141,6 +141,17 @@
   height: 30px;
 }
 
+.extras{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.extras img{
+  width: 250px;
+  height: 150px;
+}
+
 .spinner{
   position: fixed;
   z-index: 999;
