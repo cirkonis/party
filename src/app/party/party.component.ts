@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import IInvite from './Invite';
 import {PartyService} from './party.service';
 
+
 @Component({
   selector: 'app-party',
   templateUrl: './party.component.html',
