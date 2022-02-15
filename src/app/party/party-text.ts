@@ -15,10 +15,10 @@ where she wasn't born you would get the number of years she has spent on this pl
 this particular day that we will celebrate the addition of one more of these years happening (the not in Poland kind)
 and wish Kira luck on her continued journey through the ceaseless and slow decay that we call life.`;
 export const kiraFunFactOne = `Fun Fact One: Kira thinks her birthday is February + the number of years old she is, so let us enjoy the last few years
-of her life and pray for leap year.`;
+of her life and pray for a leap year.`;
 export const kiraFunFactTwo = `Fun Fact Two: Kira thinks Poland is pole land in english so she put her country in her room, you are more
 than welcome to spin on it when you come.`;
-export const kiraRegistry = `Kira insist you shower her with gifts for becoming old and achieving basic housing standards`;
+export const kiraRegistry = `Kira insist you shower her with gifts for becoming old and achieving basic housing standards.`;
 
 export const mikePartOne = `Raised in the deserts, mountains, and urban jungles of the United States, Michael in his "adulthood" decided to follow his italian
 roots by leaving his home country to become a full time immigrant somewhere else. Now he is here.`;
