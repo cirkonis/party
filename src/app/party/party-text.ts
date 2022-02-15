@@ -2,7 +2,7 @@ export const into = `One Party to rule them all, One party to find them, One par
 
 export const housePartOne = `Both Kira and Michael (see bios below) have moved into what is coincidentally
 the same apartment! Tradition and law dictate that we bring people inside our apartment so that our collective breathing
-sufficiently raises the temperature and spirits of our cold and desolate domicile`;
+sufficiently raises the temperature and spirits of our cold and desolate domicile.`;
 export const housePartTwo = `You are also encouraged to bring propane and propane accessories, candles, torches,
 charmanders, a bed of coals, or the sex appeal of George Clooney to assist in the warming.`;
 export const housePartThree = `Alternatively you can bring things from this thing Kira made.`;
