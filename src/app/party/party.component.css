@@ -3,6 +3,52 @@
   margin: 0 auto;
 }
 
+.the-beginning{
+  display: flex;
+  background-color: #282626;
+  padding: 16px;
+  position: relative;
+}
+
+.the-beginning h2 {
+  font-family: fantasy;
+  font-weight: bold;
+  font-size: 64px;
+  text-align: center;
+  color: #efc427;
+}
+
+.rings{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rings img {
+  width: 225px;
+  height: 175px;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 4000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 4000ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 4000ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+
+  animation-name: spin;
+  animation-duration: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
 .the-listy-part{
   display: flex;
   flex-flow: row wrap;
@@ -34,6 +80,22 @@
 
 .kira-section p h2, .mike-section p h2{
   font-family: Trattatello;
+}
+
+.mike-section{
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.mike-section > * {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
 }
 
 .the-cool-people-box{
@@ -75,3 +137,23 @@
   border-bottom: solid gray 1px;
   margin: 12px 0;
 }
+
+@media only screen and (max-width: 600px) {
+  #house-fire {
+    width: 66%;
+    height: 66%;
+  }
+}
+
+  @-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+  }
