@@ -14,7 +14,7 @@ export class PartyComponent implements OnInit {
   partyText = partyText;
   coolPeople: IInvite[] = [];
   shitPeople: IInvite[] = [];
-  goodToGo: boolean;
+  loading: boolean;
 
   constructor(private partyService: PartyService, public dialog: MatDialog) {}
 
@@ -23,6 +23,7 @@ export class PartyComponent implements OnInit {
   }
 
   loadInvites(): void{
+    this.loading = true;
     let invites: IInvite[] = [];
     this.coolPeople = [];
     this.shitPeople = [];
@@ -30,6 +31,7 @@ export class PartyComponent implements OnInit {
       invites = data.data;
       this.sortTheCoolFromtheUncool(invites);
     });
+    this.loading = false;
   }
 
   sortTheCoolFromtheUncool(invites: IInvite[]): void{
