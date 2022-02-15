@@ -1,3 +1,4 @@
+<div class="wrapper">
 <div class="the-beginning">{{partyText.into}}</div>
 <div class="practical-info">
 <h1>You are invited to a parties...</h1>
@@ -8,35 +9,49 @@
 <h4>TODO: 15-02-2022 MM make website cooler</h4>
 </div>
 <div class="house-warm-section">
+  <img src="../../assets/house-on-fire.jpeg" alt="fire"/>
   <h2>Party Number 1: The House Warming</h2>
-  <div>{{partyText.housePartOne}}</div>
-  <div>{{partyText.housePartTwo}}</div>
-  <div>{{partyText.housePartThree}}</div>
+  <p>{{partyText.housePartOne}}</p>
+  <p>{{partyText.housePartTwo}}</p>
+  <p>{{partyText.housePartThree}}</p>
   <a href="https://xn--nskeskyen-k8a.dk/share/Kira-Jensen_Here-you-go-mom?fbclid=IwAR30nKe91r9vtJ3gqoGOw6r45UblzO1ccENGYYQHZZjeIL32-S1z-ra1u-I</>">
     Buy our apartment Stuff
   </a>
   <div>{{partyText.housePartFour}}</div>
 </div>
-<div class="kira-section">
+  <div class="divider"></div>
+  <div class="kira-section">
+  <div>
   <h2>Party Number B: Kira was Born</h2>
-  <div>{{partyText.kiraPartOne}}</div>
-  <div>{{partyText.kiraPartTwo}}</div>
-  <div>Kira Fun Facts</div>
-  <div>{{partyText.kiraFunFactOne}}</div>
-  <div>{{partyText.kiraFunFactTwo}}</div>
-  <div>{{partyText.kiraRegistry}}</div>
+  <img src="../../assets/kira.png" alt="kira"/>
+  </div>
+  <div>
+  <p>{{partyText.kiraPartOne}}</p>
+  <p>{{partyText.kiraPartTwo}}</p>
+  <p>Kira Fun Facts</p>
+  <p>{{partyText.kiraFunFactOne}}</p>
+  <p>{{partyText.kiraFunFactTwo}}</p>
+  <p>{{partyText.kiraRegistry}}</p>
   <a href="https://xn--nskeskyen-k8a.dk/share/Kira-Jensen_Here-you-go-mom?fbclid=IwAR30nKe91r9vtJ3gqoGOw6r45UblzO1ccENGYYQHZZjeIL32-S1z-ra1u-I</>">
     Buy Kira Stuff
   </a>
+  </div>
 </div>
+  <div class="divider"></div>
 <div class="mike-section">
-  <h2>Party Number Charlie: Michael is Alone</h2>
-  <div>{{partyText.mikePartOne}}</div>
-  <div>{{partyText.mikePartTwo}}</div>
-  <div>{{partyText.mikePartThree}}</div>
-  <div>{{partyText.mikeRegistry}}</div>
+  <div>
+  <p>{{partyText.mikePartOne}}</p>
+  <p>{{partyText.mikePartTwo}}</p>
+  <p>{{partyText.mikePartThree}}</p>
+  <p>{{partyText.mikeRegistry}}</p>
+  </div>
+  <div>
+    <h2>Party XIV: Michael is Alone</h2>
+    <img src="../../assets/mike.png" alt="mike"/>
+  </div>
 </div>
-<div class="what to expect">
+  <div class="divider"></div>
+  <div class="what to expect">
 <h2>What to Expect</h2>
   <div>Hot Cheetos</div>
   <div>Takis</div>
@@ -51,7 +66,8 @@
   <div>Branca</div>
   <div>Spotify</div>
 </div>
-<div class="rsvp">
+  <div class="divider"></div>
+  <div class="rsvp">
 <h1>RSVP</h1>
 <div class="the-listy-part">
   <div class="the-cool-people-box">
@@ -69,5 +85,8 @@
 </div>
   </div>
 </div>
+</div>
+  <div class="divider"></div>
+<div class="extras"></div>
 </div>
 <mat-spinner *ngIf="loading" class="spinner"></mat-spinner>
