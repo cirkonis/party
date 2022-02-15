@@ -24,10 +24,10 @@ export const mikePartOne = `Raised in the deserts, mountains, and urban jungles 
 roots by leaving his home country to become a full time immigrant somewhere else. Now he is here.`;
 
 export const mikePartTwo = `Michael is an expert in many fields but excels in failure and relationships, and even more
-so when combining the two. After 16 years of serial relationship failing Michael decided to lay dwon the foundations of a
-new technique he has coined "Preemptive relationship failing" which is closely related to the science of staying single.`;
+so when combining the two. After 16 years of serial relationship failing Michael decided to lay down the foundations of a
+new technique he has coined as "Preemptive relationship failing" which is closely related to the science of staying single.`;
 
-export const mikePartThree = `The end of February marks one trip of solitude around the Sun, he has celebrated many
+export const mikePartThree = `The end of February marks one trip of solitude around the Sun for Michael. He has celebrated many
 anniversaries but this will be his first aloniversary`;
 
 export const mikeRegistry = `Michael does not understand the concept of registries but highly recommends Amazon
