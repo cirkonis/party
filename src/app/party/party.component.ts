@@ -46,7 +46,10 @@ export class PartyComponent implements OnInit {
   }
 
   makeCool(invite: IInvite): void {
-    if (this.checkPasscode(invite.passcode)){
+    const goodToGo = this.checkPasscode(invite.passcode);
+    console.log(goodToGo);
+    if (goodToGo){
+      console.log('made it here');
       this.updateInviteRsvp(invite, 1);
     }
   }
