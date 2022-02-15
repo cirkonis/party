@@ -1,0 +1,20 @@
+<div class="dialog-wrapper">
+  <h1>Entor your passcode</h1>
+  <form [formGroup]="passcodeForm" class="form-wrapper" (submit)="onSubmit()">
+    <div>
+      <mat-form-field>
+        <mat-label > Passcode </mat-label>
+        <input
+          formControlName="passcode"
+          matInput
+          type="text"
+          placeholder="Secret secrets"
+          maxlength="50"
+          [required]="true"
+        >
+      </mat-form-field>
+    </div>
+      <button type="submit" [disabled]="!passcodeForm.valid">Entor</button>
+      <button mat-dialog-close>Never Mind</button>
+  </form>
+</div>
