@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import IInvite from './Invite';
 import {PartyService} from './party.service';
-
+import * as partyText from './party-text';
 
 @Component({
   selector: 'app-party',
@@ -9,6 +9,7 @@ import {PartyService} from './party.service';
   styleUrls: ['./party.component.css']
 })
 export class PartyComponent implements OnInit {
+  partyText = partyText;
   coolPeople: IInvite[] = [];
   shitPeople: IInvite[] = [];
 
