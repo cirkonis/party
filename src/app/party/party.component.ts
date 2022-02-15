@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import IInvite from './Invite';
 import {PartyService} from './party.service';
 import * as partyText from './party-text';
+import {PartyDialogComponent} from './party-dialog/party-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-party',
@@ -13,7 +15,7 @@ export class PartyComponent implements OnInit {
   coolPeople: IInvite[] = [];
   shitPeople: IInvite[] = [];
 
-  constructor(private partyService: PartyService) {}
+  constructor(private partyService: PartyService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.loadInvites();
@@ -38,19 +40,15 @@ export class PartyComponent implements OnInit {
   }
 
   makeShit(invite: IInvite): void {
-    if (this.checkPasscode()){
+    if (this.checkPasscode(invite.passcode)){
       this.updateInviteRsvp(invite, 0);
     }
   }
 
   makeCool(invite: IInvite): void {
-    if (this.checkPasscode()){
+    if (this.checkPasscode(invite.passcode)){
       this.updateInviteRsvp(invite, 1);
     }
-  }
-
-  checkPasscode(): boolean {
-    return true;
   }
 
   updateInviteRsvp(invite: IInvite, coolness: 0 | 1): void{
@@ -65,4 +63,14 @@ export class PartyComponent implements OnInit {
     });
   }
 
+  checkPasscode(passcode: string): boolean | void{
+    const dialogRef = this.dialog.open(PartyDialogComponent, {
+      width: '250px',
+      height: '250px',
+      data: {passcode},
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      return !!result.result;
+    });
+  }
 }
