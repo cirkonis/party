@@ -41,18 +41,11 @@ export class PartyComponent implements OnInit {
   }
 
   makeShit(invite: IInvite): void {
-    if (this.checkPasscode(invite.passcode)){
-      this.updateInviteRsvp(invite, 0);
-    }
+    this.checkPasscode(invite, 0);
   }
 
   makeCool(invite: IInvite): void {
-    const goodToGo = this.checkPasscode(invite.passcode);
-    console.log(goodToGo);
-    if (goodToGo){
-      console.log('made it here');
-      this.updateInviteRsvp(invite, 1);
-    }
+    this.checkPasscode(invite, 1);
   }
 
   updateInviteRsvp(invite: IInvite, coolness: 0 | 1): void{
@@ -67,15 +60,16 @@ export class PartyComponent implements OnInit {
     });
   }
 
-  checkPasscode(passcode: string): boolean {
+  checkPasscode(invite: IInvite, coolness: 0 | 1): void {
     const dialogRef = this.dialog.open(PartyDialogComponent, {
       width: '250px',
       height: '250px',
-      data: {passcode},
+      data: {passcode: invite.passcode},
     });
     dialogRef.afterClosed().subscribe(result => {
-      this.goodToGo = result.result;
+     if (result.result === true){
+       this.updateInviteRsvp(invite, coolness);
+     }
     });
-    return this.goodToGo;
   }
 }
