@@ -34,3 +34,119 @@ export const mikeRegistry = `Michael does not understand the concept of registri
 if you like to shop. He kindly ask you not to hand him things as he will assume you are coming onto him and he will start
 reading from the book he is currently writing titled "A primer on preemptive relationship failing, the dangers of dating,
 and what to think about when you are alone".`;
+
+export const code = '<div class="wrapper">\n' +
+  '<div class="the-beginning">\n' +
+  '  <div class="rings">\n' +
+  '    <img src="../../assets/lotr.png">\n' +
+  '    <img src="../../assets/lotr.png">\n' +
+  '  </div>\n' +
+  '  <h2>{{partyText.into}}</h2>\n' +
+  '</div>\n' +
+  '<div class="practical-info">\n' +
+  '<h1>You are invited to a parties...</h1>\n' +
+  '<h1>Date: February Saturday 26 </h1>\n' +
+  '<h1>Time: I dunno, like around 17 or sumtn </h1>\n' +
+  '<h1>Where: Axel Strøbyes vej 7</h1>\n' +
+  '<h1>Why: warm our apartment, kira is born, mike is alone. Three parties, one place, lucky lucky you :D</h1>\n' +
+  '<h4>TODO: 15-02-2022 MM make website cooler - done, thanks mike.</h4>\n' +
+  '</div>\n' +
+  '<div class="house-warm-section">\n' +
+  '  <img id="house-fire" src="../../assets/house-on-fire.jpeg" alt="fire"/>\n' +
+  '  <h2>Party Number 1: The House Warming</h2>\n' +
+  '  <p>{{partyText.housePartOne}}</p>\n' +
+  '  <p>{{partyText.housePartTwo}}</p>\n' +
+  '  <p>{{partyText.housePartThree}}</p>\n' +
+  '  <a href="https://xn--nskeskyen-k8a.dk/share/Kira-Jensen_Here-you-go-mom?fbclid=IwAR30nKe91r9vtJ3gqoGOw6r45UblzO1ccENGYYQHZZjeIL32-S1z-ra1u-I</>">\n' +
+  '    Buy our apartment Stuff\n' +
+  '  </a>\n' +
+  '  <p>{{partyText.housePartFour}}</p>\n' +
+  '</div>\n' +
+  '  <div class="divider"></div>\n' +
+  '  <div class="kira-section">\n' +
+  '  <div>\n' +
+  '  <h2>Party Number B: Kira was Born</h2>\n' +
+  '  <img src="../../assets/kira.png" alt="kira"/>\n' +
+  '  </div>\n' +
+  '  <div>\n' +
+  '  <p>{{partyText.kiraPartOne}}</p>\n' +
+  '  <p>{{partyText.kiraPartTwo}}</p>\n' +
+  '  <p>Kira Fun Facts</p>\n' +
+  '  <p>{{partyText.kiraFunFactOne}}</p>\n' +
+  '  <p>{{partyText.kiraFunFactTwo}}</p>\n' +
+  '  <p>{{partyText.kiraRegistry}}</p>\n' +
+  '  <a href="https://xn--nskeskyen-k8a.dk/share/Kira-Jensen_Here-you-go-mom?fbclid=IwAR30nKe91r9vtJ3gqoGOw6r45UblzO1ccENGYYQHZZjeIL32-S1z-ra1u-I</>">\n' +
+  '    Buy Kira Stuff\n' +
+  '  </a>\n' +
+  '  </div>\n' +
+  '</div>\n' +
+  '  <div class="divider"></div>\n' +
+  '<div class="mike-section">\n' +
+  '  <div>\n' +
+  '    <h2>Party XIV: Michael is Alone</h2>\n' +
+  '    <img src="../../assets/mike.png" alt="mike"/>\n' +
+  '  </div>\n' +
+  '  <div>\n' +
+  '  <p>{{partyText.mikePartOne}}</p>\n' +
+  '  <p>{{partyText.mikePartTwo}}</p>\n' +
+  '  <p>{{partyText.mikePartThree}}</p>\n' +
+  '  <p>{{partyText.mikeRegistry}}</p>\n' +
+  '  </div>\n' +
+  '</div>\n' +
+  '  <div class="divider"></div>\n' +
+  '  <div class="what to expect">\n' +
+  '<h2>What to Expect</h2>\n' +
+  '    <div class="what-to-expect-pics">\n' +
+  '    <img src="../../assets/cheetos.png">\n' +
+  '    <img src="../../assets/takis.png">\n' +
+  '    <img src="../../assets/art.png">\n' +
+  '    <img src="../../assets/candy.png">\n' +
+  '    <img src="../../assets/hass.png">\n' +
+  '    <img src="../../assets/markus.png">\n' +
+  '    <img src="../../assets/mike-expect.png">\n' +
+  '    <img src="../../assets/pizzarosso.jpeg">\n' +
+  '    <img src="../../assets/wine.png">\n' +
+  '    <img src="../../assets/dice.jpeg">\n' +
+  '    <img src="../../assets/chicken.jpeg">\n' +
+  '    <img src="../../assets/beer.jpeg">\n' +
+  '    <img src="../../assets/goose.jpeg">\n' +
+  '    <img src="../../assets/kira-extra.png">\n' +
+  '    </div>\n' +
+  '</div>\n' +
+  '  <div class="divider"></div>\n' +
+  '  <div class="rsvp">\n' +
+  '<h1>RSVP</h1>\n' +
+  '<div class="the-listy-part">\n' +
+  '  <div class="the-cool-people-box">\n' +
+  '<h2>Cool People that Are Coming</h2>\n' +
+  '<div class = "cool-people" *ngFor="let invite of coolPeople">\n' +
+  '  <h3>{{invite.name}}</h3>\n' +
+  '  <button (click)="makeShit(invite)">Click 2 be UNcool</button>\n' +
+  '</div>\n' +
+  '  </div>\n' +
+  '  <div class="the-shit-people-box">\n' +
+  '<h2>Not as Cool People That are not Coming</h2>\n' +
+  '<div class = "shit-peeps" *ngFor="let shitvite of shitPeople">\n' +
+  '  <h3>{{shitvite.name}}</h3>\n' +
+  '  <button (click)="makeCool(shitvite)">Click 2 be COOL</button>\n' +
+  '</div>\n' +
+  '  </div>\n' +
+  '</div>\n' +
+  '</div>\n' +
+  '  <div class="divider"></div>\n' +
+  '<div class="extras">\n' +
+  '  <img src="../../assets/forLads.png">\n' +
+  '  <img src="../../assets/forMagda.png">\n' +
+  '  <img src="../../assets/forTaco.png">\n' +
+  '  <img src="../../assets/forIris.png">\n' +
+  '  <img src="../../assets/forRosa.png">\n' +
+  '  <img src="../../assets/forJulie.png">\n' +
+  '  <img src="../../assets/forAlin.png">\n' +
+  '  <img src="../../assets/forCalvin.png">\n' +
+  '  <img src="../../assets/forMike.png">\n' +
+  '  <img src="../../assets/forSidsel.png">\n' +
+  '  <img src="../../assets/forKira.png">\n' +
+  '  <img src="../../assets/forLuky.png">\n' +
+  '</div>\n' +
+  '</div>\n' +
+  '<mat-spinner *ngIf="loading" class="spinner"></mat-spinner>';
