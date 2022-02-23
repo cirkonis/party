@@ -82,6 +82,7 @@
 <div class="the-listy-part">
   <div class="the-cool-people-box">
 <h2>Cool People that Are Coming</h2>
+    <h3 style="color: #f5b806">Basically everyone apparently</h3>
 <div class = "cool-people" *ngFor="let invite of coolPeople">
   <h3>{{invite.name}}</h3>
   <button (click)="makeShit(invite)">Click 2 be UNcool</button>
@@ -89,7 +90,8 @@
   </div>
   <div class="the-shit-people-box">
 <h2>Not as Cool People That are not Coming</h2>
-<div class = "shit-peeps" *ngFor="let shitvite of shitPeople">
+    <img style="width: 200px;" src="../../assets/umbrige.png">
+    <div class = "shit-peeps" *ngFor="let shitvite of shitPeople">
   <h3>{{shitvite.name}}</h3>
   <button (click)="makeCool(shitvite)">Click 2 be COOL</button>
 </div>
